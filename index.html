@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ONG CuidarBem — Missão e Projetos</title>
+  <meta name="description" content="Plataforma da ONG CuidarBem: missão, equipe e contato. Saiba como ajudar e participar.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {font-family: Arial,system-ui,-apple-system;line-height:1.5;margin:0;padding:0;color:#111}
+    header, footer {background:#0b6; padding:1rem;color:#fff}
+    nav a{color:#fff;margin-right:1rem;text-decoration:none}
+    .container{max-width:1000px;margin:0 auto;padding:1rem}
+    .hero{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
+    @media(min-width:700px){ .hero{grid-template-columns:1fr 1fr}}
+    .card{background:#f6f6f6;padding:1rem;border-radius:8px}
+    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="container">
+      <h1>ONG CuidarBem</h1>
+      <p class="visually-hidden">Barra de navegação principal</p>
+      <nav aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="cadastro.html">Cadastre-se</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h2 id="hero-title">Transformando comunidades com ações concretas</h2>
+        <p>Nossa missão é apoiar famílias em situação de vulnerabilidade através de educação, saúde e geração de renda.</p>
+        <p><strong>Contato:</strong> contato@ongcuidarbem.org | <a href="tel:+5511912345678">+55 (11) 91234-5678</a></p>
+      </div>
+      <figure>
+        <picture>
+          <source srcset="assets/images/hero.webp" type="image/webp" />
+          <img src="assets/images/hero.jpg" alt="Voluntários trabalhando em uma ação comunitária" style="width:70%;height:auto;border-radius:8px" loading="lazy">
+        </picture>
+        <figcaption class="visually-hidden">Voluntários em atividade</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="sobre-title" class="card" style="margin-top:1rem">
+      <h2 id="sobre-title">Sobre a Organização: ONG CuidarBem</h2>
+      <p>A ONG CuidarBem nasceu em 2025 do desejo de construir uma sociedade mais justa e igualitária. Impulsionados pela urgência de agir, focamos nossos esforços em duas áreas que consideramos pilares para o desenvolvimento humano e comunitário: Educação e Inclusão Social..</p>
+      <h2 id="sobre-title2">Nossa Missão</h2>
+      <p>Empoderar indivíduos em situação de vulnerabilidade, oferecendo acesso a uma educação de qualidade e promovendo a inclusão social plena, para que todos tenham a chance de alcançar seu máximo potencial e exercer sua cidadania.</p>
+      <h2 id="sobre-title3">Nossos Pilares de Atuação</h2>
+      <p>Educação que Transforma: Desenvolvemos programas de reforço escolar, alfabetização de jovens e adultos, cursos profissionalizantes e oficinas culturais, preparando nossos atendidos para os desafios do presente e as oportunidades do futuro.</p>
+      <p>Inclusão que Acolhe: Criamos um ambiente seguro e acolhedor, com projetos que combatem o preconceito, fortalecem vínculos comunitários e garantem o acesso a direitos básicos, promovendo a autonomia e a autoestima.</p>
+    </section>
+
+    <section aria-labelledby="noticias-title" style="margin-top:1rem">
+      <h2 id="noticias-title">Últimas notícias</h2>
+      <article aria-labelledby="n1">
+        <h3 id="n1">Campanha de arrecadação alcança 80% da meta</h3>
+        <p>Graças ao apoio local, atingimos 80% da meta para o início das aulas de reforço.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p>ONG CuidarBem — Transformando comunidades com ações concretas. <a href="projetos.html">Conheça nossos projetos</a></p>
+      <p>Endereço: Rua Joao Siqueira da Costa, 173 — São Paulo, SP | CNPJ: 01.203.465/0001-00</p>
+    </div>
+  </footer>
+</body>
+</html>
