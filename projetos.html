@@ -3,30 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projetos — ONG CuidarBem</title>
-  <meta name="description" content="Projetos sociais da ONG CuidarBem: voluntariado, campanhas e como doar.">
+  <title>ONG CuidarBem — Missão e Projetos</title>
+  <meta name="description" content="Plataforma da ONG CuidarBem: missão, equipe e contato. Saiba como ajudar e participar.">
   <link rel="stylesheet" href="css/style.css">
-    <style>
-    body {font-family: Arial,system-ui,-apple-system;line-height:1.5;margin:0;padding:0;color:#111}
-    header, footer {background:#0b6; padding:1rem;color:#fff}
-    nav a{color:#fff;margin-right:1rem;text-decoration:none}
-    .container{max-width:1000px;margin:0 auto;padding:1rem}
-    .hero{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
-    @media(min-width:700px){ .hero{grid-template-columns:1fr 1fr}}
-    .card{background:#f6f6f6;padding:1rem;border-radius:8px}
-    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Projetos</h1>
-      <nav aria-label="Navegação de projetos">
-        <a href="index.html">Início</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="cadastro.html">Cadastre-se</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">ONG CuidarBem</div>
+      <nav class="nav" aria-label="Menu principal">
+        <div class="nav-item"><a href="index.html">Início</a></div>
+        <div class="nav-item"><a href="projetos.html">Projetos</a></div>
+        <div class="nav-item"><a href="cadastro.html">Cadastre-se</a></div>
       </nav>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="mobile-nav" id="mobileMenu" aria-label="Menu mobile">
+      <div class="nav-item"><a href="index.html">Início</a></div>
+      <div class="nav-item"><a href="projetos.html">Projetos</a></div>
+      <div class="nav-item"><a href="cadastro.html">Cadastre-se</a></div>
+    </nav>
   </header>
 
   <main class="container">
@@ -73,10 +71,28 @@
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="container">
-      <p>© ONG CuidarBem</p>
+      <p>ONG CuidarBem — Transformando comunidades com ações concretas. <a href="projetos.html">Conheça nossos projetos</a></p>
+      <p>Endereço: Rua Joao Siqueira da Costa, 173 — São Paulo, SP | CNPJ: 01.203.465/0001-00</p>
     </div>
   </footer>
+    <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active');
+    });
+
+    // Fecha o menu ao clicar em um link
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburgerBtn.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
