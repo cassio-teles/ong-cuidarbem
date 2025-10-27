@@ -1,6 +1,6 @@
 🌱 ONG CuidarBem — Plataforma Web
 
-Este repositório faz parte da Entrega 1 da disciplina de Front-End Web do curso de Análise e Desenvolvimento de Sistemas.
+Este repositório faz parte da disciplina de Front-End Web do curso de Análise e Desenvolvimento de Sistemas.
 
 
 
@@ -29,6 +29,20 @@ Implementar navegação responsiva e interativa (menu principal, submenu e menu 
 
 Demonstrar boas práticas de acessibilidade (WCAG) e SEO.
 
+✨ Funcionalidades Avançadas (SPA):
+
+Arquitetura SPA: Converter o site estático em uma Single Page Application (SPA), onde todo o conteúdo é carregado dinamicamente sem recarregar a página.
+
+Roteamento Client-Side: Implementar um roteador JavaScript (js/router.js) que usa Hash Routing (#/) para gerenciar a navegação, garantindo compatibilidade com hospedagem estática (GitHub Pages) e o uso do histórico do navegador (botões voltar/avançar).
+
+Modularidade (ES6 Modules): Estruturar todo o código JavaScript em módulos (import/export), separando responsabilidades (App, Roteador, Templates, Validação, Máscaras).
+
+Templates JavaScript: Criar um sistema de templates (js/templates.js) que gera o HTML das "páginas" dinamicamente, permitindo a fácil reutilização de componentes (como os cards de projeto).
+
+Validação Avançada: Criar um sistema de validação (js/validation.js) que verifica não apenas o formato (HTML5), mas a consistência dos dados (ex: validação algorítmica de CPF).
+
+Persistência de Dados: Armazenar os dados do formulário de cadastro no localStorage do navegador após a validação bem-sucedida.
+
 🧾 Estrutura de Páginas
 
 | Página          | Descrição                                                                         |
@@ -37,23 +51,28 @@ Demonstrar boas práticas de acessibilidade (WCAG) e SEO.
 | `projetos.html` | Listagem de projetos sociais com cards responsivos e informações de voluntariado. |
 | `cadastro.html` | Formulário de cadastro de voluntários e doadores com validação e máscaras.        |
 
+O projeto não utiliza mais arquivos HTML separados para cada página. Ele usa um único index.html como "shell" e carrega o conteúdo dinamicamente com JavaScript.
 
 📂 Estrutura de Pastas
 ong-cuidarbem/
 
-├─ index.html
-
-├─ projetos.html
-
-├─ cadastro.html
+├─ index.html           (Arquivo HTML único, "shell" da aplicação)
 
 ├─ css/
 
-│  └─ style.css
+│  └─ style.css         (Estilos, incluindo feedback de validação)
 
 ├─ js/
 
-│  └─ masks.js
+│  ├─ app.js            (Ponto de entrada, inicializa o menu e o roteador)
+
+│  ├─ router.js         (Gerencia as rotas e renderiza os templates)
+
+│  ├─ templates.js      (Contém os templates HTML das "páginas")
+
+│  ├─ validation.js     (Lógica de validação avançada e salvamento no localStorage)
+
+│  └─ masks.js          (Funções de máscara de input, agora como módulo)
 
 ├─ assets/
 
@@ -118,6 +137,10 @@ Navegação adaptada para mobile com menu hambúrguer funcional.
 
 ✅ Fechamento automático do menu ao clicar em um link.
 
+✨ Navegação SPA: Toda a navegação principal é gerenciada pelo js/router.js, que intercepta cliques e atualiza o DOM sem recarregar a página.
+
+✨ Hash Routing: Utiliza window.location.hash (ex: #/projetos) para permitir navegação, uso do botão "Voltar" e compatibilidade total com hospedagem estática (GitHub Pages).
+
 
 
 🧱 Componentes de Interface
@@ -134,6 +157,7 @@ Alerts, Toasts e Modals prontos para uso;
 
 Badges e tags para categorização de informações.
 
+
 🦾 Formulários e Máscaras
 
 Validação de campos com atributos HTML5 (required, pattern, minlength etc.);
@@ -143,6 +167,12 @@ Máscaras JS para CPF, Telefone e CEP (masks.js);
 Feedback visual de erro com classes CSS (.input.invalid);
 
 Campos acessíveis com aria-label, aria-required e aria-describedby.
+
+✨ Feedback de Validação Avançado: O js/validation.js injeta mensagens de erro específicas (.form-error-message) para cada campo que falha na validação, melhorando a usabilidade.
+
+✨ Validação de Consistência: Implementada verificação algorítmica para o CPF, garantindo que o número não seja apenas formatado corretamente, mas que seja um CPF matematicamente válido.
+
+✨ Persistência de Dados: Após a validação bem-sucedida, os dados do formulário são coletados e salvos como um objeto JSON no localStorage do navegador.
 
 
 
@@ -174,7 +204,7 @@ Títulos (<title>) claros e descritivos;
 
 Atributos alt em imagens;
 
-Estrutura semântica para melhor indexação.
+Estrutura semântica para melhor indexação. (Nota: O uso de Hash Routing em SPAs é menos ideal para SEO do que o roteamento estático, mas foi uma escolha técnica para garantir a funcionalidade no GitHub Pages.)
 
 
 
@@ -182,10 +212,20 @@ Estrutura semântica para melhor indexação.
 
 
 
-HTML5
+HTML5 Semântico
 
-CSS3 (Mobile First, Flexbox e Grid)
+CSS3 (Mobile First, Flexbox e Grid, Variáveis Customizadas)
 
-JavaScript Vanilla
+JavaScript (ES6+)
+
+Arquitetura Single Page Application (SPA)
+
+Módulos ES6 (import/export)
+
+Manipulação Avançada do DOM
+
+Roteamento Client-Side (Hash Routing)
+
+LocalStorage API
 
 Git & GitHub Pages
