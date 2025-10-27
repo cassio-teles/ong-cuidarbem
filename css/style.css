@@ -219,3 +219,48 @@ body{
 .visually-hidden{
   position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px;
 }
+/* Estilos para Validação Avançada */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Espaço entre label, input e erro */
+}
+
+/* Adiciona o asterisco vermelho para campos obrigatórios */
+.form-group label[data-required="true"]::after {
+  content: ' *';
+  color: var(--color-danger);
+  font-weight: bold;
+}
+
+/* Mensagem de erro */
+.form-error-message {
+  color: var(--color-danger);
+  font-size: var(--fs-sm);
+  display: none; /* Oculto por padrão */
+  margin-top: 2px;
+}
+
+/* Mostra a mensagem de erro quando o input é inválido */
+.input.invalid + .form-error-message {
+  display: block;
+}
+
+/* O input 'invalid' já estava definido, mas garantimos */
+.input.invalid {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.06);
+}
+
+/* Ajuste para o campo de checkbox */
+.form-group-checkbox {
+  display: flex;
+  flex-direction: row-reverse; /* Coloca o input antes do label */
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.form-group-checkbox label {
+  margin: 0;
+}
