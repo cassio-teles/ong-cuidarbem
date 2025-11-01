@@ -207,7 +207,7 @@ export const registerTemplate = () => `
           <option value="RR">RR</option>
           <option value="SC">SC</option>
           <option value="SE">SE</option>
-          <option valuea="TO">TO</option>
+          <option value="TO">TO</option>
         </select>
         <span class="form-error-message" id="estado-error" aria-live="polite"></span>
       </div>
