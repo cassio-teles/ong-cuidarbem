@@ -1,25 +1,36 @@
 // js/templates.js
 
-// --- 1. Dados da Aplicação (Simulando um DB/API) ---
+// --- NOVO: IMPORTAR TODAS AS IMAGENS ---
+// O Vite irá processar isso e nos dar os caminhos corretos.
+// Note o ../ para "subir" da pasta /js/ para a raiz.
+import heroJpg from '../assets/images/hero.jpg';
+import heroWebp from '../assets/images/hero.webp';
+import proj1Jpg from '../assets/images/projeto1.jpg';
+import proj1Webp from '../assets/images/projeto1.webp';
+import proj2Jpg from '../assets/images/projeto2.jpg';
+import proj2Webp from '../assets/images/projeto2.webp';
 
+
+// --- 1. Dados da Aplicação (Simulando um DB/API) ---
+// MODIFICADO: Usar as variáveis importadas, não strings de texto
 const projectData = [
   {
     id: 'proj1',
     title: 'Educação Comunitária',
-    img: { webp: 'assets/images/projeto1.webp', jpg: 'assets/images/projeto1.jpg' },
+    img: { webp: proj1Webp, jpg: proj1Jpg }, // Modificado
     alt: 'Crianças em sala de aula',
     caption: 'Oficinas de reforço escolar e material didático.',
     description: 'Objetivo: reduzir a evasão escolar e reforçar conteúdos essenciais.',
-    link: '#voluntariado' // Links internos da página (âncoras) não mudam
+    link: '#voluntariado'
   },
   {
     id: 'proj2',
     title: 'Projeto Crescer - Empreenda',
-    img: { webp: 'assets/images/projeto2.webp', jpg: 'assets/images/projeto2.jpg' },
+    img: { webp: proj2Webp, jpg: proj2Jpg }, // Modificado
     alt: 'Comercio Aberto com o Microcredito Solidario',
     caption: 'Comercio Aberto com o Microcredito Solidario.',
     description: 'Objetivo: Fortalecer a economia local e gerar renda para familias que querem empreender. Oficinas e microcrédito solidário para pequenos empreendedores.',
-    link: '#voluntariado' // Links internos da página (âncoras) não mudam
+    link: '#voluntariado'
   }
 ];
 
@@ -27,7 +38,7 @@ const projectData = [
 
 /**
  * Cria o HTML para um único card de projeto.
- * @param {object} project - O objeto do projeto
+ * (Nenhuma mudança aqui, pois ele lê do projectData que já corrigimos)
  */
 function createProjectCard(project) {
   return `
@@ -61,8 +72,8 @@ export const homeTemplate = () => `
     </div>
     <figure>
       <picture>
-        <source srcset="assets/images/hero.webp" type="image/webp" />
-        <img src="assets/images/hero.jpg" alt="Voluntários trabalhando em uma ação comunitária" class="img-responsive" loading="lazy">
+        <source srcset="${heroWebp}" type="image/webp" />
+        <img src="${heroJpg}" alt="Voluntários trabalhando em uma ação comunitária" class="img-responsive" loading="lazy">
       </picture>
       <figcaption class="visually-hidden">Voluntários em atividade</figcaption>
     </figure>
@@ -83,7 +94,7 @@ export const homeTemplate = () => `
 
 /**
  * Template para a Página de Projetos
- * Usa o "componente" createProjectCard para renderizar os dados.
+ * (Nenhuma mudança aqui, pois createProjectCard já faz o trabalho)
  */
 export const projectsTemplate = () => `
 <div class="container">
@@ -109,7 +120,7 @@ export const projectsTemplate = () => `
 
 /**
  * Template para a Página de Cadastro
- * O HTML foi reestruturado para suportar mensagens de erro.
+ * (Nenhuma mudança aqui)
  */
 export const registerTemplate = () => `
 <div class="container">
@@ -180,7 +191,7 @@ export const registerTemplate = () => `
           <option value="DF">DF</option>
           <option value="ES">ES</option>              
           <option value="GO">GO</option>
-          <option value="RJ">RJ</option>              
+          <option value="RJ">RJ</Coption>              
           <option value="MA">MA</option>
           <option value="MT">MT</option>              
           <option value="MS">MS</option>
@@ -196,7 +207,7 @@ export const registerTemplate = () => `
           <option value="RR">RR</option>
           <option value="SC">SC</option>
           <option value="SE">SE</option>
-          <option value="TO">TO</option>
+          <option valuea="TO">TO</option>
         </select>
         <span class="form-error-message" id="estado-error" aria-live="polite"></span>
       </div>
