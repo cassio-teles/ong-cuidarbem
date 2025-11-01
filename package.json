@@ -1,0 +1,17 @@
+{
+  "name": "ong-cuidarbem",
+  "version": "1.0.0",
+  "description": "🌱 ONG CuidarBem — Plataforma Web",
+  "main": "index.js",
+ "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^7.1.12"
+  }
+}
