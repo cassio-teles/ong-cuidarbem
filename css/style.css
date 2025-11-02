@@ -6,7 +6,7 @@
   --color-secondary: #0b8457;
   --color-accent: #f0a500;
   --color-neutral-100: #ffffff;
-  --color-neutral-300: #c7ddad;
+  --color-neutral-300: #ffffff;
   --color-neutral-600: #6b6b6b;
   --color-neutral-900: #111111;
   --color-danger: #c53030;
@@ -129,11 +129,12 @@ body{
 
 /* .nav (Menu Desktop) - ESCONDIDO no mobile */
 .nav{
-  display:none; /* Escondido por padrão (mobile-first) */
-  gap:var(--space-16);
-  align-items:center;
-  order: 2; /* Ordem no desktop */
+  display: none; /* <-- É ESTA LINHA que esconde os links "Início...", etc. */
+  gap: var(--space-16);
+  align-items: center;
+  order: 2; 
 }
+
 .nav a{
   color:var(--color-header-text);
   text-decoration:none;
@@ -160,7 +161,7 @@ body{
 
 /* .hamburger (Botão Mobile) - MOSTRADO no mobile */
 .hamburger{
-  display:inline-flex; /* Mostrado por padrão (mobile-first) */
+  display: inline-flex; /* Mostrado por padrão (mobile-first) */
   flex-direction:column;
   gap:4px;
   width:36px;
@@ -262,8 +263,18 @@ body{
 }
 
 @media (min-width: 992px) and (max-width: 1199px) { /* lg */ :root { --breakpoint: lg } }
-@media (min-width: 1200px) { /* xl */ :root { --breakpoint: xl } }
+@media (min-width: 700px) { /* xl */ :root { --breakpoint: xl } }
 
+/* MOSTRA o .nav (menu desktop) */
+  .nav {
+    display: flex; /* <-- É ESTA LINHA que RE-MOSTRA os links no desktop */
+    order: 2;
+  }
+  
+  /* ESCONDE o .hamburger (botão mobile) */
+  .hamburger {
+    display: none; /* <-- É ESTA LINHA que ESCONDE o 🍔 no desktop */
+  }
 
 /* Hero */
 .hero{
