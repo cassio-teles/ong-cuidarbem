@@ -2,7 +2,7 @@
 Este repositório faz parte da disciplina de Front-End Web do curso de Análise e Desenvolvimento de Sistemas.
 
 
-ACESSSE E VEJA:
+ACESSE E VEJA:
 
 https://cassio-teles.github.io/ong-cuidarbem/#/
 
