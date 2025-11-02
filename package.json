@@ -3,15 +3,20 @@
   "version": "1.0.0",
   "description": "🌱 ONG CuidarBem — Plataforma Web",
   "main": "index.js",
- "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-},
+"scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "vite": "^7.1.12"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
