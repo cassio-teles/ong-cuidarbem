@@ -159,6 +159,7 @@ body{
 }
 
 /* .hamburger (Botão Mobile) - MOSTRADO no mobile */
+/* .hamburger (Botão Mobile) - MOSTRADO no mobile */
 .hamburger{
   display:inline-flex; /* Mostrado por padrão (mobile-first) */
   flex-direction:column;
@@ -168,7 +169,7 @@ body{
   cursor:pointer;
   background:none;
   border:0;
-  color:inherit;
+  color: var(--color-header-text);
   order: 3; /* Ordem no mobile */
 }
 .hamburger span{
