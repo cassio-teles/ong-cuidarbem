@@ -156,9 +156,9 @@ body{
   padding: 0;
   line-height: 1;
   order: 2; /* Ordem no mobile */
+  margin-left: auto; /* CORREÇAO PARA IPHONES */
 }
 
-/* .hamburger (Botão Mobile) - MOSTRADO no mobile */
 /* .hamburger (Botão Mobile) - MOSTRADO no mobile */
 .hamburger{
   display:inline-flex; /* Mostrado por padrão (mobile-first) */
@@ -250,7 +250,7 @@ body{
   
   /* ESCONDE o .hamburger (botão mobile) */
   .hamburger {
-    display: none;
+    display: flex;
   }
   
   /* Re-ordena o botão de tema */

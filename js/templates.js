@@ -1,8 +1,6 @@
 // js/templates.js
 
 // --- NOVO: IMPORTAR TODAS AS IMAGENS ---
-// O Vite irá processar isso e nos dar os caminhos corretos.
-// Note o ../ para "subir" da pasta /js/ para a raiz.
 import heroJpg from '../assets/images/hero.jpg';
 import heroWebp from '../assets/images/hero.webp';
 import proj1Jpg from '../assets/images/projeto1.jpg';
@@ -21,7 +19,7 @@ const projectData = [
     alt: 'Crianças em sala de aula',
     caption: 'Oficinas de reforço escolar e material didático.',
     description: 'Objetivo: reduzir a evasão escolar e reforçar conteúdos essenciais.',
-    link: '#voluntariado'
+    link: '#/cadastro'
   },
   {
     id: 'proj2',
@@ -30,7 +28,7 @@ const projectData = [
     alt: 'Comercio Aberto com o Microcredito Solidario',
     caption: 'Comercio Aberto com o Microcredito Solidario.',
     description: 'Objetivo: Fortalecer a economia local e gerar renda para familias que querem empreender. Oficinas e microcrédito solidário para pequenos empreendedores.',
-    link: '#voluntariado'
+    link: '#/cadastro'
   }
 ];
 
@@ -38,7 +36,6 @@ const projectData = [
 
 /**
  * Cria o HTML para um único card de projeto.
- * (Nenhuma mudança aqui, pois ele lê do projectData que já corrigimos)
  */
 function createProjectCard(project) {
   return `
@@ -94,7 +91,6 @@ export const homeTemplate = () => `
 
 /**
  * Template para a Página de Projetos
- * (Nenhuma mudança aqui, pois createProjectCard já faz o trabalho)
  */
 export const projectsTemplate = () => `
 <div class="container">
@@ -120,7 +116,6 @@ export const projectsTemplate = () => `
 
 /**
  * Template para a Página de Cadastro
- * (Nenhuma mudança aqui)
  */
 export const registerTemplate = () => `
 <div class="container">
